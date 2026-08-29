@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "strict": true,
+        "target": "esnext",
+        "lib": ["ESNext", "DOM"],
+        "moduleResolution": "bundler",
+        "module": "esnext",
+        "resolveJsonModule": true
+    },
+    "vueCompilerOptions": {
+        "target": 2.7
+    }
+}

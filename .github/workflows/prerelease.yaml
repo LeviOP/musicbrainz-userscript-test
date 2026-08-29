@@ -1,0 +1,28 @@
+name: prerelease
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-releases:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Setup pnpm
+        uses: pnpm/setup@v2
+        with:
+          cache: true
+          install: false
+
+      - name: Create userscript releases
+        uses: LeviOP/userscript-monorepo-action@v0.2.0
+        with:
+          userscripts-dir: userscripts
+          setup-command: pnpm ci
+          build-command: pnpm build
