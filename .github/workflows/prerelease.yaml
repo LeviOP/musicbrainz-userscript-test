@@ -21,7 +21,7 @@ jobs:
           install: false
 
       - name: Create userscript releases
-        uses: LeviOP/userscript-monorepo-action@v0.2.1
+        uses: LeviOP/userscript-monorepo-action@v0.2.2
         with:
           userscripts-dir: userscripts
           setup-command: pnpm ci

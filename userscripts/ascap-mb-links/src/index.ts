@@ -2,7 +2,7 @@ import { init } from "userscript-webpack-patcher";
 import MbLinkButton from "./MbLinkButton.vue";
 import style from "./style.css?raw";
 
-console.log("test");
+console.log("test 2");
 
 init({
     patches: [
