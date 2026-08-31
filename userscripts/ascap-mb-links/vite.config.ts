@@ -1,6 +1,6 @@
 import { defineConfig } from "vite";
 import Vue2 from "@vitejs/plugin-vue2";
-import Userscript from "vite-userscript-plugin";
+import UserscriptPlugin from "vite-userscript-plugin";
 import { name, description, version, author } from "./package.json" with { type: "json" };
 import { namespace, homepage as homepageURL, bugs } from "../../package.json" with { type: "json" };
 
@@ -10,13 +10,13 @@ export default defineConfig({
     },
     plugins: [
         Vue2(),
-        Userscript({
-            entry: "src/index.ts",
+        UserscriptPlugin({
+            entry: "src/main.ts",
             header: {
                 name,
                 namespace,
                 description,
-                version,
+                version: process.env.USERSCRIPT_VERSION || version,
                 author,
                 homepageURL,
                 supportURL: bugs.url,
@@ -33,6 +33,7 @@ export default defineConfig({
         })
     ],
     build: {
-        minify: true,
+        minify: false,
+        target: "esnext",
     },
 });
