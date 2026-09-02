@@ -30,7 +30,7 @@ export default defineConfig({
             server: {
                 file: true,
             },
-            metaFile: process.env.USERSCRIPT_VERSION !== "none",
+            metaFile: process.env.USERSCRIPT_DOWNLOAD_URL !== "none",
         })
     ],
     build: {
