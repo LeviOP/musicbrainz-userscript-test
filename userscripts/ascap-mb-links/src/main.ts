@@ -1,8 +1,6 @@
 import { init } from "userscript-webpack-patcher";
 import MbLinkButton from "./MbLinkButton.vue";
 
-console.log("test");
-
 init({
     patches: [
         {
