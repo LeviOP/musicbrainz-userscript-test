@@ -1,1 +1,4 @@
-* reprioritize when everything loads (hook)
+- reprioritize when everything loads (hook)
+- recreate download and update userscript buttons as SVGs
+  - set up windows 7 vm with utm
+- (userscript manager) add ability for display name
